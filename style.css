@@ -43,13 +43,18 @@ body {
     color: var(--cor-texto);
 }
 
+.section-contador,
+.novidades {
+    height: 90dvh;
+    width: 100%;
+}
+
 .section-contador {
     background-image: url("imagens/Prédio-4.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
-    height: 80dvh;
 }
 
 .contador {
@@ -87,7 +92,6 @@ body {
     align-items: center;
     justify-content: center;
 
-    height: 80dvh;
     background-color: var(--cor-secundaria);
     text-align: center;
     padding: 1rem;
@@ -118,6 +122,7 @@ body {
 
 .novidades form {
     width: 100%;
+    max-width: 25.5rem;
 
     display: flex;
     flex-direction: column;
@@ -160,7 +165,30 @@ button {
     margin-bottom: 2rem;
 }
 
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
 /* Provísório - Remover no futuro */
 img {
     max-width: 100%;
+    transition: all 300ms;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 744px) {
+    ul {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        display: flex;
+    }
 }
